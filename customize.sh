@@ -273,11 +273,11 @@ asset() {
   mkdir -p ${module_path}/assets
   case "${asset}" in
   loyalsoldier)
-    /data/adb/magisk/busybox wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat -O /sdcard/Download/geoip.dat >&2
+    /data/adb/ksu/bin/busybox wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geoip.dat -O /sdcard/Download/geoip.dat >&2
     if [ "$?" != "0" ]; then
       abort "- Download err"
     fi
-    /data/adb/magisk/busybox wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat -O /sdcard/Download/geosite.dat >&2
+    /data/adb/ksu/bin/busybox wget https://github.com/Loyalsoldier/v2ray-rules-dat/releases/latest/download/geosite.dat -O /sdcard/Download/geosite.dat >&2
     if [ "$?" != "0" ]; then
       abort "- Download err"
     fi
@@ -289,11 +289,11 @@ asset() {
     unzip -j -o "${download_path}" "geosite.dat" -d ${module_path}/assets >&2
     ;;
   db)
-    /data/adb/magisk/busybox wget https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db -O /sdcard/Download/geoip.db >&2
+    /data/adb/ksu/bin/busybox wget https://github.com/SagerNet/sing-geoip/releases/latest/download/geoip.db -O /sdcard/Download/geoip.db >&2
     if [ "$?" != "0" ]; then
       abort "- Download err"
     fi
-    /data/adb/magisk/busybox wget https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db -O /sdcard/Download/geosite.db >&2
+    /data/adb/ksu/bin/busybox wget https://github.com/SagerNet/sing-geosite/releases/latest/download/geosite.db -O /sdcard/Download/geosite.db >&2
     if [ "$?" != "0" ]; then
       abort "- Download err"
     fi
@@ -331,12 +331,12 @@ whichCore() {
   xray)
     download_link="https://github.com/XTLS/Xray-core/releases"
     github_api="https://api.github.com/repos/XTLS/Xray-core/releases"
-    latest_version=$(/data/adb/magisk/busybox wget -qO- ${github_api} | grep -m 1 "tag_name" | awk '{print $2}')
+    latest_version=$(/data/adb/ksu/bin/busybox wget -qO- ${github_api} | grep -m 1 "tag_name" | awk '{print $2}')
     latest_version=${latest_version:2:-2}
     whichArch
     download_file=${version}
     download_path="/sdcard/Download/${download_file}"
-    /data/adb/magisk/busybox wget "${download_link}/download/v${latest_version}/${download_file}" -O "${download_path}" >&2
+    /data/adb/ksu/bin/busybox wget "${download_link}/download/v${latest_version}/${download_file}" -O "${download_path}" >&2
     if [ "$?" != "0" ]; then
       abort "- Download err"
     fi
@@ -344,12 +344,12 @@ whichCore() {
   v2ray)
     download_link="https://github.com/v2fly/v2ray-core/releases"
     github_api="https://api.github.com/repos/v2fly/v2ray-core/releases"
-    latest_version=$(/data/adb/magisk/busybox wget -qO- ${github_api} | grep -m 1 "tag_name" | awk '{print $2}')
+    latest_version=$(/data/adb/ksu/bin/busybox wget -qO- ${github_api} | grep -m 1 "tag_name" | awk '{print $2}')
     latest_version=${latest_version:2:-2}
     whichArch
     download_file=${version}
     download_path="/sdcard/Download/${download_file}"
-    /data/adb/magisk/busybox wget "${download_link}/download/v${latest_version}/${download_file}" -O "${download_path}" >&2
+    /data/adb/ksu/bin/busybox wget "${download_link}/download/v${latest_version}/${download_file}" -O "${download_path}" >&2
     if [ "$?" != "0" ]; then
       abort "- Download err"
     fi
@@ -357,12 +357,12 @@ whichCore() {
   sagernet)
     download_link="https://github.com/SagerNet/v2ray-core/releases"
     github_api="https://api.github.com/repos/SagerNet/v2ray-core/releases"
-    latest_version=$(/data/adb/magisk/busybox wget -qO- ${github_api} | grep -m 1 "tag_name" | awk '{print $2}')
+    latest_version=$(/data/adb/ksu/bin/busybox wget -qO- ${github_api} | grep -m 1 "tag_name" | awk '{print $2}')
     latest_version=${latest_version:2:-2}
     whichArch
     download_file=${version}
     download_path="/sdcard/Download/${download_file}"
-    /data/adb/magisk/busybox wget "${download_link}/download/v${latest_version}/${download_file}" -O "${download_path}" >&2
+    /data/adb/ksu/bin/busybox wget "${download_link}/download/v${latest_version}/${download_file}" -O "${download_path}" >&2
     if [ "$?" != "0" ]; then
       abort "- Download err"
     fi
@@ -373,12 +373,12 @@ whichCore() {
     fi
     download_link="https://github.com/SagerNet/sing-box/releases"
     github_api="https://api.github.com/repos/SagerNet/sing-box/releases"
-    latest_version=$(/data/adb/magisk/busybox wget -qO- ${github_api} | grep -m 1 "tag_name" | awk '{print $2}')
+    latest_version=$(/data/adb/ksu/bin/busybox wget -qO- ${github_api} | grep -m 1 "tag_name" | awk '{print $2}')
     latest_version=${latest_version:2:-2}
     whichArch
     download_file="sing-box-${latest_version}-${version}.tar.gz"
     download_path="/sdcard/Download/${download_file}"
-    /data/adb/magisk/busybox wget "${download_link}/download/v${latest_version}/${download_file}" -O "${download_path}" >&2
+    /data/adb/ksu/bin/busybox wget "${download_link}/download/v${latest_version}/${download_file}" -O "${download_path}" >&2
     if [ "$?" != "0" ]; then
       abort "- Download err"
     fi

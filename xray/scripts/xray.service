@@ -1,5 +1,5 @@
 #!/system/bin/sh
-magisk_busybox="/data/adb/magisk/busybox"
+magisk_busybox="/data/adb/ksu/bin/busybox"
 
 bin_name="xray"
 data_path="/data/adb/xray"

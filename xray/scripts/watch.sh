@@ -102,7 +102,7 @@ main() {
 }
 
 default() {
-    /data/adb/magisk/busybox crond -c /data/adb/xray/run/
+    /data/adb/ksu/bin/busybox crond -c /data/adb/xray/run/
 
     touch /data/adb/xray/run/root
     chmod 0600 /data/adb/xray/run/root
