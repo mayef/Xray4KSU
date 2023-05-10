@@ -1,8 +1,8 @@
-English | [简体中文](README_zh_CN.md)
+English
 
-# Xray4Magisk
+# Xray4KSU
 
-A fork from [V2ray for Android](https://github.com/Magisk-Modules-Repo/v2ray)
+A fork from [Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)
 
 This is a Magisk module for Xray/v2ray/sing-box, and includes binaries for arm, arm64, x86, x64.
 
@@ -191,10 +191,6 @@ GUI support?
 Why not store config files in Internal Storage?
 
 > For privacy. Some apps may read your data, check [Storage Isolation](https://sr.rikka.app/guide/)
-
-## Contact
-
-- [Telegram](https://t.me/AsteriskFactory)
 
 ## Project X
 
