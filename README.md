@@ -2,7 +2,7 @@
 
 A fork from [Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)
 
-This is a Magisk module for Xray/v2ray/sing-box, and includes binaries for arm, arm64, x86, x64.
+This is a KernelSU module for Xray/v2ray/sing-box, and includes binaries for arm, arm64, x86, x64.
 
 ## Disclaimer
 
@@ -18,7 +18,7 @@ If you really don't know how to configure this module, you mignt need apps like 
 
 ## Install
 
-Download the module zip from [Release](https://github.com/Asterisk4Magisk/Xray4Magisk/releases) and install it via [Magisk](https://github.com/topjohnwu/Magisk) or [Xray4Magisk_Manager](https://github.com/whalechoi/Xray4Magisk_Manager).
+~~Download the module zip from [Release](https://github.com/Asterisk4Magisk/Xray4Magisk/releases) and install it via [Magisk](https://github.com/topjohnwu/Magisk) or [Xray4Magisk_Manager](https://github.com/whalechoi/Xray4Magisk_Manager).~~
 
 ### Auto installation
 
