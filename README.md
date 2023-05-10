@@ -1,5 +1,3 @@
-English
-
 # Xray4KSU
 
 A fork from [Xray4Magisk](https://github.com/Asterisk4Magisk/Xray4Magisk)
